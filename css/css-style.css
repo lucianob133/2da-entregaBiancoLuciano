@@ -1,0 +1,220 @@
+/*COLORES: CD5C08 naranja - C1D8C3 celeste claro - F5E8B7 piel - 6A9C89 c oscuro*/
+/**********************************************************************************************************************/
+/*SACAR BORDES o sea RESETEAR*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*va a respetar las medidas que use para aplicar el opadding y margin*/
+}
+
+/**********************************************************************************************************************/
+/*LOGO GENERAL - TAMAÑO*/
+header img 
+{
+    width: 150px; /*ANCHO*/
+    height: 150px; /*ALTO*/
+    
+    
+}
+/************************************************************************************************************************/
+/*IMAGENES de los cuerpos de cada seccion*/
+
+.imagenes
+{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+   
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+
+
+/*MAIN del INDEX********************************************************************************************************/
+.textoTahoma /* texto color negro de la HISTORIA*/
+{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*CARACTERES Main - body - nav etc-------------------------------------------------------------------------------*/
+body /*son todos los bodys de c/u de las pags*/
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.texto-color-bordo
+{
+color: hsl(0, 100%, 27%); /* texto color BORDO de la HISTORIA*/
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/***********************************************************************************************************************/
+/*HEADER*/
+
+header
+{
+    background-color:#6A9C89 ; /* BACKGROUND COLOR ES para el fondo del menu- o header */
+    display: flex; 
+    flex-direction:row; 
+    /* FLEX ES PARA MOVER EL BLOQUE de "hijos" dentro de los padres, en este caso el menu al lado 
+    del logo principal*/
+    justify-content: space-between; /* JUSTIFY es para mover los bloques*/
+    
+}
+
+nav /*MENU*/
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: #9e4705;
+    width: 50%;    /*ESTE ancho es la distancia entre palabras de los links*/
+    align-items: flex-end;
+    
+   /*border: rgb(60, 255, 0) solid 3px;*/
+    
+}
+
+header ul /* UL es el padre, entonces vamos a mover el HIJO que en este caso son los "li" del menu*/
+{
+    list-style-type: none;
+    
+    display: flex; /*con esto activo el flexbox*/
+    flex-direction: row; /* ROW es la posicion de horizontal*/
+    justify-content: space-between;
+    /*border-right: 4px;*/
+    margin-right: 5px; /*EL MARGIN SIRVE para mover un poco del margen*/ 
+    /*border: rgb(255, 0, 119) solid 3px;*/
+    height: 100%; /*PARA USAR ALIGN ITEMS nececito tener 100 de alto, asi se pueden mover*/
+    align-items: center;
+}
+
+.banner /*IMAGENES DE TODOS LOS MENUS del titulo principal*/
+{   
+    color: #c9c9c9;
+    background-image: url(../imagenes/CATARATAS.jpg); /*Se agrega la imagen en este caso en el titulo del index que elegi*/
+    background-position:center; /* center y cover son para ajustar la imagen de fondo detras del texto*/
+    background-size:cover;
+    padding: 50px 0px;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.9); /*TEXT SHADOW ES para la sombra del texto.. se encuenta en la pag web*/
+    font-size: 100% ;   
+    font-size: 30px;
+    margin-bottom: 2px; /*margen de abajo*/
+
+}
+
+/*TITULO H1 ************************************************************************************************************/
+
+h1  /*general*/
+{
+    color: #ce5e09;
+    text-align: center; /* TEXTO EN EL MEDIO- en este caso los titulos*/
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.88);
+}
+
+/*VUELOS--------------------------------------------------------------------------------------*/
+
+.tipos-vuelos
+{
+    display: flex; /*con esto activo el flexbox*/
+    flex-direction: row; /* ROW es la posicion de horizontal*/
+    justify-content: space-between;
+    margin-bottom: 6px;   /*Le da espacio a esto, y lo que esta abajo*/
+}
+
+.v-nacionales,
+.v-internacionales 
+{
+  flex: 1;
+  margin: 15px 10px; /* el 1° es para arriba y abajo. el 2° es para izq y derecha.
+   Agrega margen a ambos lados para separar las secciones */
+}
+/**********GRID PARA IMAGEN Y TEXTO DE VUELOS**********************/
+.grid-padre-vuelos img 
+{
+    width: 100%;   /*esto se pone para que las rows funcionen bien*/
+    height: 100%;
+}
+.grid-padre-vuelos
+{
+ display: grid;   /*este display siempre hay que ponerlo si es GRID*/
+ grid-template-areas: /*permite combinar celdas en áreas y 
+  nombrarlas. Esto facilita la tarea de dividir los elementos en la rejilla.*/
+
+ "imagen2 texto1 texto1"
+ "imagen2 imagen1 imagen1"
+ "imagen2 imagen1 imagen1"; /*creamos un especie de columnas para organizarnos y luego las nombramos con estas cosas.
+ Si se repite es porque es la mitad de la imagen en un espacio y la otra en otro.*/
+
+grid-template-columns: /*es para poner el "ancho" que va a tener c/u de las columnas*/
+    20% 45% 20%; /*estas son las medidas de las columnas de arriba.   Eligo 85% asi queda un 15% de la pantalla en blanco*/
+
+grid-template-rows: /*trabajamos el "alto" que va a tener c/u de las columnas en px; (en algo fijo).*/
+    200px 150px 100px;    
+    justify-content: start; /*TAMBIEN se usa en flexbox, es para centrar todo o mover todo de un lado a otro.*/
+    /*iria center pero no me gusta*/
+
+    column-gap: 4px; /*También se puede agregar, para separar márgenes entre imágenes*/
+}
+
+.grid-vuelo-imagen1  /*ACA LO ACOMODAMOS, NOMBRANDO LAS COSAS*/
+{
+   grid-area: imagen1;
+}
+.grid-vuelo-imagen2
+{
+    grid-area: imagen2;
+}
+.grid-vuelo-texto1
+{
+    grid-area: texto1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px; /* Agrega espacio superior a la clase 'tel' (ajusta según tus necesidades) */
+    margin-left: 5px;
+}
+
+
+
+
+/*----FOOTERS GENERALES ---------------------------------------------------------------------------*/
+
+.pie-pagina
+{
+   
+    background-color:#6A9C89 ;
+    margin: auto;
+    padding: 10px 5px; /*es para que vaaya el color del pie de pagina hasta el limite*/
+    /*el 2° padding es para mover el margen a la derecha un poco de forma general */
+}
+.pie-pagina .redes-texto
+{
+    margin-left: 7px; /*EL MARGIN SIRVE para mover un poco del margen*/ 
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+    font-size: 75%;
+    margin-bottom: 10px; 
+    /*Esto creará espacio entre el texto y las imágenes dentro del elemento con la clase "redes". 
+    Puedes ajustar el valor del margen según tus preferencias para controlar la separación.*/
+    
+}
+
+.pie-pagina .copyright
+{   margin: 20px;
+    width: 100%;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.88); /*SOMPREADO DE LAS LETRAS*/
+    
+}
+
+.pie-pagina .tel
+{
+    margin-top: 20px; /* Agrega espacio superior a la clase 'tel' (ajusta según tus necesidades) */
+    margin-bottom: 10px;
+    
+}
+.pie-pagina .tel .wtsp
+{
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+    margin-bottom: 10px; 
+        /*Esto creará espacio entre el texto y las imágenes dentro del elemento con la clase "redes". 
+    Puedes ajustar el valor del margen según tus preferencias para controlar la separación.*/
+    margin-left: 7px; /*EL MARGIN SIRVE para mover un poco del margen*/ 
+}
