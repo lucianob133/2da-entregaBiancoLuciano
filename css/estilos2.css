@@ -252,7 +252,7 @@ main .grid-hospedaje-texto1 {
     flex-direction: column; /*pone en columna el menu x 2*/
     align-items: end; /* manda al final derecho el menu */
     margin-top: -80px;
-    width: 490px;
+    width: 190%;
     height: 105px;
   }
   nav {
