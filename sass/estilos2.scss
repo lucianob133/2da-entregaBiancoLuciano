@@ -1,0 +1,333 @@
+@charset "UTF-8";
+/*COLORES: CD5C08 naranja - C1D8C3 celeste claro - F5E8B7 piel - 6A9C89 c oscuro*/
+/**********************************************************************************************************************/
+/*SACAR BORDES o sea RESETEAR*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /*va a respetar las medidas que use para aplicar el opadding y margin*/
+}
+
+/********HEADER**************************************************************************************************************/
+header {
+  background-color: #6A9C89; /* BACKGROUND COLOR ES para el fondo del menu- o header */
+  display: flex;
+  flex-direction: initial;
+  /* FLEX ES PARA MOVER EL BLOQUE de "hijos" dentro de los padres, en este caso el menu al lado 
+  del logo principal*/
+  justify-content: space-between; /* JUSTIFY es para mover los bloques*/
+}
+header img {
+  width: 150px; /*ANCHO*/
+  height: 150px; /*ALTO*/
+  margin-left: 10px;
+}
+header nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 50%; /*ESTE ancho es la distancia entre palabras de los links*/
+  align-items: flex-start;
+  /*border: rgb(60, 255, 0) solid 3px;*/
+}
+header a { /* tambien MENU color de letras del menu*/
+  text-decoration: none;
+  color: #9e4705;
+}
+header ul {
+  list-style-type: none;
+  display: flex; /*con esto activo el flexbox*/
+  flex-direction: row; /* ROW es la posicion de horizontal*/
+  justify-content: space-between;
+  /*border-right: 4px;*/
+  margin-right: 5px; /*EL MARGIN SIRVE para mover un poco del margen*/
+  /*border: rgb(255, 0, 119) solid 3px;*/
+  height: 100%; /*PARA USAR ALIGN ITEMS nececito tener 100 de alto, asi se pueden mover*/
+  align-items: center;
+}
+
+/*****MAIN INDEX********************************/
+main h1 {
+  color: #ce5e09;
+  text-align: center; /* TEXTO EN EL MEDIO- en este caso los titulos*/
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.88);
+}
+main .titulo-h2-home {
+  color: #c9c9c9;
+}
+main .imagenes {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  height: 100%;
+  width: 100%;
+}
+main .textoTahoma {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+main .texto-color-bordo {
+  color: hsl(0, 100%, 27%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+main .banner {
+  background-image: url(../imagenes/CATARATAS.jpg); /*Se agrega la imagen en este caso en el titulo del index que elegi*/
+  background-position: center; /* center y cover son para ajustar la imagen de fondo detras del texto*/
+  background-size: cover; /*como quiero la imagen*/
+  padding: 50px 0px; /* controlar el espacio entre el contenido y el borde de un elemento HTML*/
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); /*TEXT SHADOW ES para la sombra del texto.. se encuenta en la pag web*/
+  font-size: 100%;
+  font-size: 30px;
+  margin-bottom: 2px; /*margen de abajo*/
+}
+
+/*CARACTERES Main - body - nav etc-------------------------------------------------------------------------------*/
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/*VUELOS--------------------------------------------------------------------------------------*/
+.tipos-vuelos
+{
+  display: flex; /*con esto activo el flexbox*/
+  flex-direction: row; /* ROW es la posicion de horizontal*/
+  justify-content: space-between;
+  margin-bottom: 6px;   /*Le da espacio a esto, y lo que esta abajo*/
+}
+
+main .v-nacionales,
+.v-internacionales 
+{
+  flex: 1;
+  margin: 15px 10px; /* el 1° es para arriba y abajo. el 2° es para izq y derecha.
+   Agrega margen a ambos lados para separar las secciones */
+}
+/**********GRID PARA IMAGEN Y TEXTO DE VUELOS**********************/
+main .grid-padre-vuelos img 
+{
+    width: 100%;   /*esto se pone para que las rows funcionen bien*/
+    height: 100%;
+}
+
+.grid-padre-vuelos
+{
+ display: grid;   /*este display siempre hay que ponerlo si es GRID*/
+ grid-template-areas: /*permite combinar celdas en áreas y 
+  nombrarlas. Esto facilita la tarea de dividir los elementos en la rejilla.*/
+
+ "imagen2 texto1 texto1"
+ "imagen2 imagen1 imagen1"
+ "imagen2 imagen1 imagen1"; /*creamos un especie de columnas para organizarnos y luego las nombramos con estas cosas.
+ Si se repite es porque es la mitad de la imagen en un espacio y la otra en otro.*/
+
+  grid-template-columns: /*es para poner el "ancho" que va a tener c/u de las columnas*/
+  20% 45% 20%; /*estas son las medidas de las columnas de arriba.   Eligo 85% asi queda un 15% de la pantalla en blanco*/
+
+  grid-template-rows: /*trabajamos el "alto" que va a tener c/u de las columnas en px; (en algo fijo).*/
+  200px 150px 100px;    
+  justify-content: start; /*TAMBIEN se usa en flexbox, es para centrar todo o mover todo de un lado a otro.*/
+  /*iria center pero no me gusta*/
+
+  column-gap: 4px; /*También se puede agregar, para separar márgenes entre imágenes*/
+}
+
+.grid-vuelo-imagen1  /*ACA LO ACOMODAMOS, NOMBRANDO LAS COSAS*/
+{
+   grid-area: imagen1;
+}
+.grid-vuelo-imagen2
+{
+    grid-area: imagen2;
+}
+.grid-vuelo-texto1
+{
+  grid-area: texto1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px; /* Agrega espacio superior a la clase 'tel' (ajusta según tus necesidades) */
+  margin-left: 5px;
+}
+
+/*HOSPEDAJE--------------------------------------------------------------------------------------*/
+main .grid-carrusel {
+  text-shadow: 4px 4px 8px rgb(0, 0, 0);
+  
+}
+main .grid-carrusel p {
+  font-size: 20px;
+}
+main .grid-padre-hospedaje img {
+  width: 100%; /*esto se pone para que las rows funcionen bien*/
+  height: 100%;
+  
+}
+main .grid-padre-hospedaje {
+  display: grid; /*este display siempre hay que ponerlo si es GRID*/
+  grid-template-areas: "texto-hotel1 texto-hotel1 texto-hotel1" "carrusel1     carrusel1   carrusel1" "carrusel1     carrusel1   carrusel1"; /*creamos un especie de columnas para organizarnos y luego 
+las nombramos con estas cosas.
+Si se repite es porque es la mitad de la imagen en un espacio y la otra en otro.*/
+  grid-template-columns: 80% 5% 10%; /*estas son las medidas de las columnas de arriba.   Eligo 85% asi queda un 15% de la pantalla en blanco*/
+  grid-template-rows: 100px 160px 600px;
+  justify-content: center; /*TAMBIEN se usa en flexbox, es para centrar todo o mover todo de un lado a otro.*/
+  /*iria center pero no me gusta*/
+}
+main .grid-carrusel {
+  grid-area: carrusel1;
+  
+}
+main .grid-hospedaje-texto1 {
+  grid-area: texto-hotel1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px; /* Agrega espacio superior a la clase 'tel' (ajusta según tus necesidades) */
+  margin-left: 5px;
+}
+
+/*****CONTACTO**********************************************************************************/
+.datos-contacto {
+  margin-left: 4px;
+}
+
+.mapa {
+  width: 95%;
+  height: 30vh; /* Establece la altura al 100% del alto de la ventana gráfica (viewport height) */
+  margin: 0 auto; /* Establece márgenes automáticos a izquierda y derecha para centrar el elemento horizontalmente */
+  display: block; /* Asegura que el iframe sea un elemento de bloque */
+}
+
+.datos-contactogenerales {
+  display: flex; /*con esto activo el flexbox*/
+  flex-direction: row; /* ROW es la posicion de horizontal*/
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-left: 20px;
+  margin-bottom: 2px; /*Le da espacio a esto, y lo que esta abajo*/
+}
+
+/*----FOOTERS GENERALES ---------------------------------------------------------------------------*/
+.pie-pagina {
+  background-color: #6A9C89;
+  margin: auto;
+  padding: 10px 5px; /*es para que vaaya el color del pie de pagina hasta el limite*/
+  /*el 2° padding es para mover el margen a la derecha un poco de forma general */
+  margin-top: 5px; /* Agrega espacio superior a la clase 'tel' (ajusta según tus necesidades) */
+}
+
+.pie-pagina .redes-texto {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-left: 4px; /*EL MARGIN SIRVE para mover un poco del margen*/
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 75%;
+  margin-bottom: 10px;
+  /*Esto creará espacio entre el texto y las imágenes dentro del elemento con la clase "redes". 
+  Puedes ajustar el valor del margen según tus preferencias para controlar la separación.*/
+}
+
+.no-icono {
+  display: none;
+}
+
+.pie-pagina .copyright {
+  margin: 20px;
+  width: 100%;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.88); /*SOMPREADO DE LAS LETRAS*/
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-block-end: auto;
+}
+
+.pie-pagina .tel {
+  margin-top: 20px; /* Agrega espacio superior a la clase 'tel' (ajusta según tus necesidades) */
+  margin-bottom: 10px;
+}
+
+.pie-pagina .tel .wtsp {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  /*Esto creará espacio entre el texto y las imágenes dentro del elemento con la clase "redes". 
+  Puedes ajustar el valor del margen según tus preferencias para controlar la separación.*/
+  margin-left: 7px; /*EL MARGIN SIRVE para mover un poco del margen*/
+}
+
+ 
+/**********************************************************************************************************************/
+/*CELULAR APP*/
+@media screen and (max-width: 500px) {
+  header {
+    flex-direction: column; /*pone en columna el menu*/
+  }
+  nav ul {
+    /*display: flex; - ya esta en flex, aclaro para entenderlo yo*/
+    flex-direction: column; /*pone en columna el menu x 2*/
+    align-items: end; /* manda al final derecho el menu */
+    margin-top: -80px;
+    width: 490px;
+    height: 105px;
+  }
+  nav {
+    width: 100%;
+  }
+  header img {
+    width: 100px; /*ANCHO*/
+    height: 100px; /*ALTO*/
+    margin-left: 5px;
+  }
+  /*----FOOTERS GENERALES ---------------------------------------------------------------------------*/
+  .redes .iconos-redes, .tel .iconos-redes2 {
+    display: flex; /* Alinear los elementos horizontalmente */
+    justify-content: space-around; /* Espacio entre los elementos */
+    align-items: center; /* Alineación vertical al centro */
+  }
+  .tel {
+    display: none; /*es el wtsp pero aca no se ve, se ve el NO-ICONO*/
+  }
+  .no-icono {
+    display: flex;
+    text-decoration: none; /* Eliminar el subrayado */
+  }
+  /******************IMAGEN y titulos BANNER*******************************/
+  h1 {
+    font-size: 20px; /*Ajusta el tamaño*/
+  }
+  .titulo-h2-home {
+    font-size: 20px;
+  }
+  /****************PAG INICIO**************************************************************************/
+  .banner {
+    padding: 20px 0px; /* controlar el espacio entre el contenido y el borde de un elemento HTML*/
+  }
+  .imagenes {
+    flex-direction: column;
+  }
+  /****************HOSPEDAJE********************************************************************************/
+  main .grid-padre-hospedaje {
+    grid-template-columns: 80% 0% 20%;
+    grid-template-rows: 100px 160px 210px;  /*esto es para mover el carrusel*/
+    
+  }
+
+  .grid-carrusel {
+    margin-top: 100px; /*tengo el problema de que no se ven las letras dentro del carrusel cuando esta en Movile.*/
+  }
+  /*main .carrusel-titulo  -carrusel titulo y carrusel parrafo, es para moverlo hacia arriba y que se vea pero no..-
+  {
+    margin-top: -100px;
+    color: #ce5e09;
+  }*/
+  
+  /****************VUELOS********************************************************************************/
+  .grid-padre-vuelos {
+    grid-template-columns: 25% 45% 30%; /*estas son las medidas de las columnas de arriba.   Eligo 85% asi queda un 15% de la pantalla en blanco*/
+    justify-content: center;
+    grid-template-rows: 340px 50px 100px;
+    /*ALTO*/
+  }
+  /****************CONTACTO********************************************************************************/
+  .mapa {
+    width: 95%;
+    height: 50vh; /* Establece la altura al 100% del alto de la ventana gráfica (viewport height) */
+    margin: 0 auto; /* Establece márgenes automáticos a izquierda y derecha para centrar el elemento horizontalmente */
+    display: block; /* Asegura que el iframe sea un elemento de bloque */
+  }
+  .datos-contactogenerales {
+    flex-direction: column; /* ROW es la posicion de horizontal*/
+    justify-content: space-between;
+  }
+}
+
+

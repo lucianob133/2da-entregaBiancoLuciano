@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TREKKING</title>
-     <!--CSS-->
-     <link rel="stylesheet" href="../css/css-style.css">
+     
      <!--ICONOS-->
     <script src="https://kit.fontawesome.com/2c92030277.js" crossorigin="anonymous"></script>
+
+     <!-- ANIMACION DE TEXTO-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+     <!--AOS ANIMACION EN IMAGENES - ABAJO EN "BODY" ESTA EL OTRO-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <!--CSS-->
+     <!--<link rel="stylesheet" href="../css/css-style.css">-->
+         <!--CSS CON SASS-->
+         <link rel="stylesheet" href="../css/estilos2.css">
 </head>
 
 
@@ -47,30 +56,30 @@
 
     <main>
         <section class="banner"> <!--titulos principales-->
-            <h1>Expediciones:</h1>
+            <h1 class="animate__animated animate__fadeInUp">Expediciones:</h1>
         </section>
 
-            <h2>Por Chile:</h2>
-             <h3>TREKKING EXTREMO</h3>
+            <h2 class="animate__animated animate__fadeInUp">Por Chile:</h2>
+             <h3 class="animate__animated animate__fadeInLeft">TREKKING EXTREMO</h3>
 
         <iframe 
             width="300" height="" src="https://www.youtube.com/embed/Pw7zhekfzTA?si=pYKni0QLXzpTGw0d" 
          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-            gyroscope; picture-in-picture; web-share" allowfullscreen>
+            gyroscope; picture-in-picture; web-share" allowfullscreen data-aos="fade-left">
         </iframe>
 
-        <h2>Por Argentina:</h2>
-        <h3>Ushuaia</h3>
+        <h2 class="animate__animated animate__fadeInUp">Por Argentina:</h2>
+        <h3 class="animate__animated animate__fadeInLeft">Ushuaia</h3>
         <iframe width="300" height="" src="https://www.youtube.com/embed/tif-tKwOZIE?si=-NAExz5LN5aji1Q0" 
         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-        gyroscope; picture-in-picture; web-share" allowfullscreen>
+        gyroscope; picture-in-picture; web-share" allowfullscreen data-aos="fade-left"> 
         </iframe>
 
-        <h2> RESTO DEL MUNDO</h2>
-        <h3>Kuwait</h3>
+        <h2 class="animate__animated animate__fadeInUp"> RESTO DEL MUNDO</h2>
+        <h3 class="animate__animated animate__fadeInLeft">Kuwait</h3>
         <iframe width="300" height="" src="https://www.youtube.com/embed/UdO0zLeG2lw?si=RzKYxIwFujpdEQaD" title="YouTube 
         video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-
-        picture; web-share" allowfullscreen>
+        picture; web-share" allowfullscreen data-aos="fade-left">
         </iframe>
     </main>
 
@@ -121,5 +130,9 @@
        
 
     </footer>
+    <!-- EL OTRO ACTIVADOR DE AOS-->
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
