@@ -176,10 +176,6 @@ main .grid-hospedaje-texto1 {
 }
 
 /*****CONTACTO**********************************************************************************/
-.datos-contacto {
-  margin-left: 4px;
-}
-
 .mapa {
   width: 95%;
   height: 30vh; /* Establece la altura al 100% del alto de la ventana gráfica (viewport height) */
@@ -187,13 +183,18 @@ main .grid-hospedaje-texto1 {
   display: block; /* Asegura que el iframe sea un elemento de bloque */
 }
 
-.datos-contactogenerales {
-  display: flex; /*con esto activo el flexbox*/
-  flex-direction: row; /* ROW es la posicion de horizontal*/
-  justify-content: space-between;
-  margin-right: 30px;
+.container { /* es todo el menu de contacto*/
+  margin-top: 30px;
   margin-left: 20px;
-  margin-bottom: 2px; /*Le da espacio a esto, y lo que esta abajo*/
+}
+
+.col-md-12 .text-center {
+  margin-top: 10px;
+}
+
+.bigicon {
+  font-size: 35px;
+  color: rgb(38, 163, 115);
 }
 
 /*----FOOTERS GENERALES ---------------------------------------------------------------------------*/
@@ -225,6 +226,7 @@ main .grid-hospedaje-texto1 {
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.88); /*SOMPREADO DE LAS LETRAS*/
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-block-end: auto;
+  font-size: 11px; /*tamaño de la letra*/
 }
 
 .pie-pagina .tel {
@@ -295,6 +297,9 @@ main .grid-hospedaje-texto1 {
     grid-template-columns: 80% 0% 20%;
     grid-template-rows: 100px 160px 210px; /*esto es para mover el carrusel*/
   }
+  main .grid-hospedaje-texto1 {
+    margin-top: 10px; /* Agrega espacio superior a la clase 'tel' (ajusta según tus necesidades) */
+  }
   .grid-carrusel {
     margin-top: 100px; /*tengo el problema de que no se ven las letras dentro del carrusel cuando esta en Movile.*/
   }
@@ -307,8 +312,8 @@ main .grid-hospedaje-texto1 {
   .grid-padre-vuelos {
     grid-template-columns: 25% 45% 30%; /*estas son las medidas de las columnas de arriba.   Eligo 85% asi queda un 15% de la pantalla en blanco*/
     justify-content: center;
-    grid-template-rows: 340px 50px 100px;
-    /*ALTO*/
+    grid-template-rows: 430px 50px 100px;
+    /*ALTO de las imagenes*/
   }
   /****************CONTACTO********************************************************************************/
   .mapa {
@@ -316,10 +321,6 @@ main .grid-hospedaje-texto1 {
     height: 50vh; /* Establece la altura al 100% del alto de la ventana gráfica (viewport height) */
     margin: 0 auto; /* Establece márgenes automáticos a izquierda y derecha para centrar el elemento horizontalmente */
     display: block; /* Asegura que el iframe sea un elemento de bloque */
-  }
-  .datos-contactogenerales {
-    flex-direction: column; /* ROW es la posicion de horizontal*/
-    justify-content: space-between;
   }
 }
 
