@@ -22,6 +22,7 @@ header img {
   width: 150px; /*ANCHO*/
   height: 150px; /*ALTO*/
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 header nav {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -65,17 +66,21 @@ main .textoTahoma {
 }
 main .texto-color-bordo {
   color: hsl(0, 100%, 27%);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Ajusta los valores según tus preferencias */
 }
 main .banner {
   background-image: url(../imagenes/CATARATAS.jpg); /*Se agrega la imagen en este caso en el titulo del index que elegi*/
   background-position: center; /* center y cover son para ajustar la imagen de fondo detras del texto*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agregar sombra al borde */
+
   background-size: cover; /*como quiero la imagen*/
   padding: 50px 0px; /* controlar el espacio entre el contenido y el borde de un elemento HTML*/
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); /*TEXT SHADOW ES para la sombra del texto.. se encuenta en la pag web*/
   font-size: 100%;
   font-size: 30px;
   margin-bottom: 2px; /*margen de abajo*/
+
 }
 
 /*CARACTERES Main - body - nav etc-------------------------------------------------------------------------------*/
@@ -205,6 +210,13 @@ main .grid-hospedaje-texto1 {
   font-size: 35px;
   color: rgb(38, 163, 115);
 }
+/*---TREKKING --------------------------------------------------------------------------------------*/
+
+.flex-padre-trekking
+{
+  margin-left: 10px;
+}
+
 
 /*----FOOTERS GENERALES ---------------------------------------------------------------------------*/
 .pie-pagina {
@@ -310,12 +322,12 @@ main .grid-hospedaje-texto1 {
   }
   main .grid-hospedaje-texto1 {
     
-    margin-top: 10px; /* Agrega espacio superior a la clase 'tel' (ajusta según tus necesidades) */
+    margin-top: 8px; /* Agrega espacio superior entre el texto y el carrusel */
     
   }
 
   .grid-carrusel {
-    margin-top: 100px; /*tengo el problema de que no se ven las letras dentro del carrusel cuando esta en Movile.*/
+    margin-top: 110px; /*tengo el problema de que no se ven las letras dentro del carrusel cuando esta en Movile.*/
   }
   /*main .carrusel-titulo  -carrusel titulo y carrusel parrafo, es para moverlo hacia arriba y que se vea pero no..-
   {
