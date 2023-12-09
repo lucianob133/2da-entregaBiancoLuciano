@@ -44,6 +44,7 @@ header ul {
   /*border: rgb(255, 0, 119) solid 3px;*/
   height: 100%; /*PARA USAR ALIGN ITEMS nececito tener 100 de alto, asi se pueden mover*/
   align-items: center;
+  
 }
 
 /*****MAIN INDEX********************************/
@@ -209,13 +210,39 @@ main .grid-hospedaje-texto1 {
 .bigicon {
   font-size: 35px;
   color: rgb(38, 163, 115);
+
 }
 /*---TREKKING --------------------------------------------------------------------------------------*/
 
-.flex-padre-trekking
+.flex-padre-trekking /*PADRE*/
 {
   margin-left: 10px;
+  display: flex;
+  /*background-color: aqua;
+  border: 2px solid black;*/
+  justify-content: space-between;
+  width: 95%; /*no lo pongo 100% poque desborda sino*/
 }
+.imagen-trekking /*HIJO 1*/
+{
+  margin-left: 10px;
+  display: flex;
+  justify-content: center; /*centra la imagen*/
+  /*background-color: rgb(255, 0, 212);
+  border: 2px solid black;*/
+  flex-direction: column;
+  width: 70%; /*ancho de 70% del hijo el otro 30 lo tiene el otro*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.74); /* Agregar sombra al borde */
+}
+.youtube-videos /*HIJO 2*/
+{
+  display: flex;
+  /*background-color: rgb(255, 208, 0);
+  border: 2px solid black;*/
+  flex-direction:column;
+  width: 30%;
+}
+
 
 
 /*----FOOTERS GENERALES ---------------------------------------------------------------------------*/
@@ -350,6 +377,18 @@ main .grid-hospedaje-texto1 {
     display: block; /* Asegura que el iframe sea un elemento de bloque */
   }
   
+  .youtube-videos /*HIJO 2*/
+  {
+    display: flex;
+    /*background-color: rgb(255, 208, 0);
+    border: 2px solid black;*/
+    flex-direction:column;
+    width: 100%;
+  }
+  .imagen-trekking
+  {
+    display: none;
+  }
 }
 
 

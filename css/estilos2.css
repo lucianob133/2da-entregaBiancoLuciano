@@ -203,6 +203,30 @@ main .grid-hospedaje-texto1 {
 /*---TREKKING --------------------------------------------------------------------------------------*/
 .flex-padre-trekking {
   margin-left: 10px;
+  display: flex;
+  /*background-color: aqua;
+  border: 2px solid black;*/
+  justify-content: space-between;
+  width: 95%; /*no lo pongo 100% poque desborda sino*/
+}
+
+.imagen-trekking {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center; /*centra la imagen*/
+  /*background-color: rgb(255, 0, 212);
+  border: 2px solid black;*/
+  flex-direction: column;
+  width: 70%; /*ancho de 70% del hijo el otro 30 lo tiene el otro*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.74); /* Agregar sombra al borde */
+}
+
+.youtube-videos {
+  display: flex;
+  /*background-color: rgb(255, 208, 0);
+  border: 2px solid black;*/
+  flex-direction: column;
+  width: 30%;
 }
 
 /*----FOOTERS GENERALES ---------------------------------------------------------------------------*/
@@ -329,6 +353,16 @@ main .grid-hospedaje-texto1 {
     height: 50vh; /* Establece la altura al 100% del alto de la ventana gráfica (viewport height) */
     margin: 0 auto; /* Establece márgenes automáticos a izquierda y derecha para centrar el elemento horizontalmente */
     display: block; /* Asegura que el iframe sea un elemento de bloque */
+  }
+  .youtube-videos {
+    display: flex;
+    /*background-color: rgb(255, 208, 0);
+    border: 2px solid black;*/
+    flex-direction: column;
+    width: 100%;
+  }
+  .imagen-trekking {
+    display: none;
   }
 }
 
