@@ -72,10 +72,15 @@ main .textoTahoma {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main .texto-color-bordo {
+main .titulo-color-bordo {
   color: hsl(0, 100%, 27%);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Ajusta los valores según tus preferencias */
+}
+
+main .texto-color-bordo {
+  color: hsl(0, 100%, 27%);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 main .banner {
